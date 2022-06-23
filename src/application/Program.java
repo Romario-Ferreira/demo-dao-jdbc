@@ -65,7 +65,12 @@ public class Program {
 		sellerDao.update(seller);
 		System.out.println("Seller name updated to: " + seller.getName());
 		
-		
+		System.out.println();
+		System.out.println("===== TESTE 6 DeleteById =====");
+		sellerDao.deleteById(9);
+		System.out.println("Seller delete successfull");
+		depDao.deleteById(8);
+		System.out.println("Department has been delete");
 		
 		
 		DB.closeConnection();

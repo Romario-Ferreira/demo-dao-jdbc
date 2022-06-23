@@ -1,6 +1,7 @@
 package application;
 
 import java.sql.Connection;
+import java.util.Date;
 import java.util.List;
 
 import db.DB;
@@ -46,5 +47,16 @@ public class Program {
 		for (Department d : depList) {
 			System.out.println(d);
 		}
+		
+		System.out.println();
+		System.out.println("===== TESTE 4 Insert =====");
+		depDao.insert(dep = new Department(null, "DevJr"));
+		System.out.println("New department included, id = " + dep.getId());
+
+		sellerDao.insert(seller = new Seller(null, "Sampaio", "sampaio@gmail.com", new Date(),3850.00, dep));
+		System.out.println("New seller included, id = " + seller.getId());
+		
+		
+		DB.closeConnection();
 	}
 }

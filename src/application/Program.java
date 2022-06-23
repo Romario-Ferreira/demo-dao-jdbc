@@ -56,6 +56,17 @@ public class Program {
 		sellerDao.insert(seller = new Seller(null, "Sampaio", "sampaio@gmail.com", new Date(),3850.00, dep));
 		System.out.println("New seller included, id = " + seller.getId());
 		
+		System.out.println();
+		System.out.println("===== TESTE 5 Update =====");
+		dep.setName("Dev Pleno");
+		depDao.update(dep);
+		System.out.println("Departament name updated to: "+ dep.getName());
+		seller.setName("Victor");
+		sellerDao.update(seller);
+		System.out.println("Seller name updated to: " + seller.getName());
+		
+		
+		
 		
 		DB.closeConnection();
 	}
